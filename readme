@@ -1,0 +1,52 @@
+Steps to execute the PageRank assignment in Java:
+=======================================================
+1. Open Ecipse Luna on CCIS machine. If not present please install Eclipse Mars (Link to download: http://www.eclipse.org/downloads/)
+2. Unzip/Extract PageRank.zip file.
+3. Go to File --> Import... --> General and finally select "Existing Projects into Workspace" and then click Next.
+4. On the next dialog box, hit Browse and select folder "PageRank" (Note: It may be present inside a folder called "PageRank"  
+   which consists of 'PageRank' and 'MACOSX' Please select the inner folder.  
+5. Check 'Copy projects into workspace' and then hit Finish.
+6. You could see several errors in the project folder. (This is due to difference in Java versions). 
+   If no errors then you can proceed to step 7.
+7. To solve the errors:
+	a. Right click on the PageRank project -->'Properties' --> 'Java Build Path' --> 'Libraries'.
+	b. You could see errors in JRE System Library as it would be using [JavaSE-1.8] (displayed as unbound).
+	c. Next select JRE System Library and then hit 'Edit' and select the Execution environment as (JavaSE-1.7 or the java version 
+	   the machine is running on) and then hit 'Finish'. 
+	d. Press OK and then we are good to run the program.
+8. Expand the PageRank project in Project Explorer. Then --> src --> default package.
+
+For Part 1 of the assignment using the six-node example
+=======================================================
+	a. Open the PageRankDemo1.java file and hit Run (Green button with an arrow at the top).
+	b. Once the program runs it will write the pageID's and their corressponding page rank values for 1st , 10th and the 100th iteration
+	   in 6nodeResult.txt file which will be generated in the PageRank directory.
+
+For Part 2 and Part 3 of the assignment using the inlinks file consisting of 183811 pages
+=========================================================================================
+	a. Open the PageRankDemo2.java file and hit Run (Green button with an arrow at the top).
+	b. It will display the perplexity values for each iteration and will converge after a number of iterations.
+	c. Also, the perplexity values will be written to a file called perplexityIteration.txt for each iteration.
+	d. The program will generate a file named list_of_pages_with_rank.txt which will contain the list of pageID's and 
+	   their corresponding page rank values for all 183811 pages.
+	e. The program will generate a file named list_of_pages_sorted_by_rank.txt which will contain the list of 50 pageID's
+	   and their corresponding page rank values sorted based on their page rank values.
+	f. The program will generate a file named list_of_pages_sorted_by_inlink_count.txt which will contain the list of 50 pageID's,
+	   their corresponding page rank values and their inlink conunt sorted based on their inlink count.
+	g. The program will also write the proportion of pages with no inlinks, with no outlinks and pages whose page rank is less
+	   than their initial uniform values to a file called proportions.txt
+
+Contents of PageRank.zip :
+============================
+1. PageRank project folder
+2. PageRank project folder consist of:
+   a. 6nodeResult.txt : contains the result for part 1 of the assignment.
+   b. 6nodes.txt : is the input file consisting of 6 nodes with their inlinks.
+   c. list_of_pages_sorted_by_inlink_count.txt : contain the list of 50 pageID's, their corresponding page rank values 
+                                                 and their inlink conunt sorted based on their inlink count.
+   d. list_of_pages_sorted_by_rank.txt : contain the list of 50 pageID's and their corresponding page rank values sorted 
+                                         based on their page rank values
+   e. list_of_pages_with_rank.txt: contain the list of pageID's and their corresponding page rank values for all 183811 pages.
+   f. nodes.txt: is the input file consisting of 183811 nodes with their inlinks.
+   g. proportions.txt: contains the proportion of pages as mentioned in the problem statement.
+   h. Readme.txt: instructions to run the program.
